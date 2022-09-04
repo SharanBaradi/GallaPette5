@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Galla Pette</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
+    <string name="Owners_prompt">Choose an Account</string>
+    <string-array name="Owners">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
+    <string-array name="PayersNames">
+        <item>Sharan Baradi</item>
+        <item>Vidya Sagar</item>
+        <item>Srikar</item>
+        <item>Kisan Agros</item>
+        <item>Amazon</item>
+    </string-array>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestFragment">
+
+    <Spinner
+        android:id="@+id/spinner_test"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        android:entries="@array/Owners"
+
+        android:prompt="@string/Owners_prompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_testString"
+        android:layout_width="303dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_test" />
+
+    <TextView
+        android:id="@+id/editText_TestDate"
+        android:layout_width="175dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton_TestEditDate"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_TestDate"
+        app:layout_constraintEnd_toEndOf="@+id/editText_TestDate" />
+
+    <TextView
+        android:id="@+id/editText_TestTime"
+        android:layout_width="164dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textSize="22sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_TestDate"
+        app:layout_constraintStart_toEndOf="@+id/editText_TestDate" />
+
+    <ImageButton
+        android:id="@+id/imageButton_TestEditTime"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_baseline_access_time_24"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_TestTime"
+        app:layout_constraintEnd_toEndOf="@+id/editText_TestTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

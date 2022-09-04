@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rowTransactionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16sp">
+
+    <TextView
+        android:id="@+id/textView_IdItem"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="24sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeMaxTextSize="32sp"
+        android:maxWidth="60dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_PayerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Payer"
+        app:layout_constraintStart_toEndOf="@+id/textView_IdItem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_BenificiaryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Benificiary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_PayerItem"
+        app:layout_constraintEnd_toStartOf="@+id/textView_AmountItem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_PayerItem" />
+
+    <TextView
+        android:id="@+id/textView_DescriptionItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Description"
+        android:paddingRight="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_AmountItem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_PayerItem"
+        app:layout_constraintTop_toBottomOf="@+id/textView_PayerItem"
+        tools:text="abcdefghffsad iodised safasfadfsfsdfsfdfdsffsdfsdsf" />
+
+    <TextView
+    android:id="@+id/textView_AmountItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="1024"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_ListViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="@+id/textView_DescriptionItem"
+        app:layout_constraintTop_toBottomOf="@+id/textView_DescriptionItem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

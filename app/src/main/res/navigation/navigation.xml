@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.gallapette.ui.main.PlaceholderFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.gallapette.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gallapette.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listTransactionsFragment"
+            app:destination="@id/listTransactionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listTransactionsComposeFragment"
+            app:destination="@id/listTransactionsComposeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listTransactionsFragment"
+        android:name="com.example.gallapette.fragments.list.ListTransactionsFragment"
+        android:label="Transactions List"
+        tools:layout="@layout/fragment_list_transactions">
+        <action
+            android:id="@+id/action_listTransactionsFragment_to_addTransactionFragment"
+            app:destination="@id/addTransactionFragment"
+            app:popUpTo="@id/listTransactionsFragment" />
+        <action
+            android:id="@+id/action_listTransactionsFragment_to_updateTransactionFragment"
+            app:destination="@id/updateTransactionFragment"
+            app:popUpTo="@id/listTransactionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.example.gallapette.fragments.add.AddTransactionFragment"
+        android:label="Add New Payment"
+        tools:layout="@layout/fragment_add_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_listTransactionsFragment"
+            app:destination="@id/listTransactionsFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTransactionFragment"
+        android:name="com.example.gallapette.fragments.update.UpdateTransactionFragment"
+        android:label="Update Transaction"
+        tools:layout="@layout/fragment_update_transaction">
+        <action
+            android:id="@+id/action_updateTransactionFragment_to_listTransactionsFragment"
+            app:destination="@id/listTransactionsFragment"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="currentTransaction"
+            app:argType="com.example.gallapette.data.model.CashFlow" />
+    </fragment>
+    <fragment
+        android:id="@+id/listTransactionsComposeFragment"
+        android:name="com.example.gallapette.fragments.list.ListTransactionsComposeFragment"
+        android:label="ListTransactionsComposeFragment" />
+</navigation>
